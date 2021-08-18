@@ -8,8 +8,8 @@
   <iframe src = https://thingspeak.com/channels/1458407/maps/channel_show  style="height:45%;width:35%;"></iframe>
 <?php
 
- $humidity = file_get_contents('https://api.thingspeak.com/channels/1458407/fields/1/humanity.txt');
-$temp = file_get_contents('https://api.thingspeak.com/channels/1458407/fields/2/temp.txt');
+ $humidity = file_get_contents('https://api.thingspeak.com/channels/1458407/fields/1/last.txt');
+$temp = file_get_contents('https://api.thingspeak.com/channels/1458407/fields/2/last.txt');
 
  echo "temp is = ".$temp."<br>";
  echo "humidity is = ".$humidity;
