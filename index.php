@@ -1,19 +1,18 @@
-
 <html>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
-<script type="text/javascript">
-var auto_refresh = setInterval(
-function ()
-{
-$('#load_tweets').load('data.php').fadeIn("slow");
-}, 2000); // refresh every 10000 milliseconds
-</script>
-<body>
-<div id="load_tweets"> </div>
+<head>
+<script>
+    $(document).ready(function(){
+  refreshdata();
+});
 
+function refreshdata(){
+    $('#data').load('data.php', function(){
+       setTimeout(refreshdata, 5000);
+    });
+}
+</script>
+</head>
+<body>
+<div id="data"></div>
 </body>
 </html>
-
-
-
-
