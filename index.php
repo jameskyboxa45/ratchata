@@ -9,8 +9,8 @@
 
  $humidity = file_get_contents('https://api.thingspeak.com/channels/1458407/fields/1/last.txt');
 $temp = file_get_contents('https://api.thingspeak.com/channels/1458407/fields/2/last.txt');
-"<br>";
- echo "temp is = ".$temp."<br>";
+
+ echo "temp is = <br>".$temp."<br>";
  echo "humidity is = ".$humidity;
 
 ?>
