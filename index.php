@@ -16,8 +16,8 @@ function timedRefresh(timeoutPeriod) {
 
 </script>
 </head>
-<body onload="JavaScript:timedRefresh(5000);">
- 
+<body >
+ <div onload="JavaScript:timedRefresh(5000);">
 <?php
 
  $humidity = file_get_contents('https://api.thingspeak.com/channels/1458407/fields/1/last.txt');
@@ -25,7 +25,8 @@ $temp = file_get_contents('https://api.thingspeak.com/channels/1458407/fields/2/
 
  echo "<br> temp is = ".$temp."<br>";
  echo "humidity is = ".$humidity;
-
+ 
 ?>
+  </div>
 </body>
 </html>
