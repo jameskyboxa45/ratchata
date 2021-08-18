@@ -31,3 +31,4 @@ $temp = file_get_contents('https://api.thingspeak.com/channels/1458407/fields/2/
  echo "humidity is = ".$humidity;
 
 ?>
+?>
