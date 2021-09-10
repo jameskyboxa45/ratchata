@@ -37,13 +37,13 @@ $lightcheck = file_get_contents('https://api.thingspeak.com/channels/1458407/fie
   echo "<br> light is = ".$light."<br>";
  if ($lightcheck == 1) {
 
-  echo "<br> light is = "สว่าง"<br>";
+  echo "<br> lightcheck is = สว่าง <br>";
 
 
 }
 if ($lightcheck == 0) {
 
-echo "<br> light is = "มืด"<br>";
+echo "<br> lightcheck is = มืด <br>";
 
 }
  
