@@ -109,7 +109,7 @@
       });
     }
     function showChart3(data3){
-      var ctxy=document.getElementById('myChart4').getContext('2d');
+      var ctxy=document.getElementById('myChart3').getContext('2d');
       var myChart=new Chart(ctxy,{
           type:'line',
           data:{
@@ -121,8 +121,8 @@
           }
       });
     }
-    function showChart4(data2){
-      var ctxy=document.getElementById('myChart3').getContext('2d');
+    function showChart4(data4){
+      var ctxy=document.getElementById('myChart4').getContext('2d');
       var myChart=new Chart(ctxy,{
           type:'line',
           data:{
@@ -139,7 +139,7 @@
      
       $(()=>{
           
-          let url="https://api.thingspeak.com/channels/1458413/feeds.json?results=50";
+          let url="https://api.thingspeak.com/channels/1458407/feeds.json?results=50";
           $.getJSON(url)
             .done(function(data){
               //console.log(data);
@@ -180,19 +180,19 @@
               data2.xlabel=xlabel;
               data2.data=humi;
               data2.label=chan.field1;
-              showLine(data2);
+              showChart(data2);
 
               var data3=new Object();
               data3.xlabel=xlabel;
               data3.data=light;
               data3.label=chan.field1;
-              showLine(data3);
+              showChart(data3);
 
               var data4=new Object();
               data2.xlabel=xlabel;
               data2.data=lightcheck;
               data2.label=chan.field1;
-              showLine(data4);
+              showChart(data4);
 
 
               
